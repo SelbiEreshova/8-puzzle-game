@@ -15,6 +15,7 @@
   -webkit-animation-duration: 2s;
   animation-name: fade;
   animation-duration: 2s;
+    transition-duration: 0.5s;
 }
 
 @-webkit-keyframes fade {
@@ -38,5 +39,22 @@
 }
 .button:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.pic
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    transition-duration: 0.5s;
+}
+.border-pic
+{
+    border-radius: 30px;
+}
+.pic:hover
+{
+   opacity: 0.5;
 
 }

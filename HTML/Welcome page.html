@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <title>Welcome</title>
+    <title>8 puzzle</title>
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/style.css">
@@ -11,31 +11,62 @@
 <body>
 <section class="section">
     <div class="container" style="position: relative">
-        <div class="column ">
-            <h1 class="title is-1 center">
-                8 Puzzle Game
-            </h1>
-        </div>
-        <div class="center">
-            <div class="card welcome-card slides">
-                <div class="center">
-                    <div class="myslide vertical-center ">
-                        <p class="subtitle pd  fade">
-                            Enjoy!
-                        </p>
-                    </div>
-                    <div class="myslide vertical-center">
-                        <p class="subtitle pd slide fade">
-                            Have Fun!
-                        </p>
+        <div class="page">
+            <div class="column ">
+                <h1 class="title is-1 center">
+                    8 Puzzle Game
+                </h1>
+            </div>
+            <div class="center">
+                <div class="card welcome-card slides">
+                    <div class="center">
+                        <div class="myslide vertical-center ">
+                            <p class="subtitle pd  fade">
+                                Enjoy!
+                            </p>
+                        </div>
+                        <div class="myslide vertical-center">
+                            <p class="subtitle pd slide fade">
+                                Have Fun!
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="center">
+                <a href="">
+                    <button class="button is-danger   is-outlined is-large ">Start</button>
+                </a>
+            </div>
         </div>
-        <div class="center">
-            <a href="ImagePick.html">
-                <button class="button is-danger   is-outlined is-large ">Start</button>
-            </a>
+        <div class="page">
+            <p class="title is-3 center pt-6">
+                Pick an Image
+            </p>
+            <div class="center pt-6 pb-5">
+                <div class="columns pt-4">
+                    <div class="column">
+                        <figure class="image pic " id="box">
+                            <img class="border-pic boxShadow" src="../pics/giraffe.jpg">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image pic boxShadow">
+                            <img class="border-pic" src="../pics/mountain.jpg">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure class="image pic boxShadow">
+                            <img class="border-pic" src="../pics/box.jpg">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="center pt-6">
+                <a href="">
+                    <button class="button is-danger is-outlined" onclick="showImgPick()" >Continue</button>
+                </a>
+            </div>
         </div>
     </div>
 </section>
