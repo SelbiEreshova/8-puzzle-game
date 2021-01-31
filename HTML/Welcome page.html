@@ -11,7 +11,7 @@
 <body>
 <section class="section">
     <div class="container" style="position: relative">
-        <div class="page">
+        <div class="page fade">
             <div class="column ">
                 <h1 class="title is-1 center">
                     8 Puzzle Game
@@ -35,41 +35,68 @@
             </div>
             <div class="center">
                 <a href="">
-                    <button class="button is-danger   is-outlined is-large ">Start</button>
+                    <button class="button is-danger   is-outlined is-large " onclick="return showImgPick()">Start
+                    </button>
                 </a>
             </div>
         </div>
-        <div class="page">
+        <div class="page fade">
             <p class="title is-3 center pt-6">
                 Pick an Image
             </p>
             <div class="center pt-6 pb-5">
                 <div class="columns pt-4">
                     <div class="column">
-                        <figure class="image pic " id="box">
-                            <img class="border-pic boxShadow" src="../pics/giraffe.jpg">
+                        <figure class="image pic boxShadow" id="box">
+                            <img id="1." class="border-pic" src="../pics/img1.jpg" onclick="return mark(this.id)">
                         </figure>
                     </div>
                     <div class="column">
                         <figure class="image pic boxShadow">
-                            <img class="border-pic" src="../pics/mountain.jpg">
+                            <img id="2." class="border-pic" src="../pics/img2.jpg " onclick="return mark(this.id)">
                         </figure>
                     </div>
                     <div class="column">
                         <figure class="image pic boxShadow">
-                            <img class="border-pic" src="../pics/box.jpg">
+                            <img id="3." class="border-pic" src="../pics/img3.jpg" onclick="return mark(this.id)">
                         </figure>
                     </div>
                 </div>
             </div>
             <div class="center pt-6">
                 <a href="">
-                    <button class="button is-danger is-outlined" onclick="showImgPick()" >Continue</button>
+                    <button class="button is-danger is-outlined continue" onclick="return showPuzzlePage()">Continue</button>
                 </a>
             </div>
         </div>
-    </div>
+        <div class="page fade">
+            <div  class="puzzle-box" onmouseover="changeOpacity(0.5)" onmouseout="changeOpacity(1)">
+                <ul id="ul">
+                </ul>
+            </div>
+            <div class="center pt-6">
+                <label for="shuffle" class="title for-shuffle">
+                    Select Shuffle Amount
+                </label>
+            </div>
+            <div class="center pt-3">
+                <select name="shuffle"  class="shuffle" id="shuffle">
+                    <option selected disabled value="none">Choose shuffle</option>
+                    <option value="3">3 moves</option>
+                    <option value="30">30 moves</option>
+                </select>
+            </div>
+            <div class="center pt-3">
+                <button class=" button is-danger   is-outlined hideButton" id="play" onclick="return play()">Start</button>
+                </div>
+            </div>
+            <div id="backdrop" class="center">
+                <h2 id="popup" class="center">Congratulations!</h2>
+                <p id="f5" class="center">Press F5 to restart</p>
+            </div>
+        </div>
+
 </section>
-<script type="text/javascript" src="../JS/js.js"></script>
+<script type="text/javascript" src="../JS/js.js" defer></script>
 </body>
 </html>

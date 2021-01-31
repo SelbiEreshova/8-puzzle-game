@@ -12,10 +12,10 @@
 }
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 2.5s;
   animation-name: fade;
-  animation-duration: 2s;
-    transition-duration: 0.5s;
+  animation-duration: 1.3s;
+    transition-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
@@ -52,9 +52,69 @@
 .border-pic
 {
     border-radius: 30px;
+    box-shadow: 10px 10px 18px #888888
+
 }
 .pic:hover
 {
    opacity: 0.5;
 
+}
+
+.puzzle-box
+{
+    background-color: whitesmoke;
+    height: 470px;
+    width: 470px;
+    margin: 14px auto;
+    border: 2px solid rgb(192, 192, 192);
+    border-radius: 20px;
+}
+
+.puzzle-box li
+{
+    position: absolute;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #86e225;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 150px;
+    font-size: 40px;
+}
+#1
+{
+    background: url("../pics/img2.jpg") -150px 0 no-repeat;
+    top: 5px;
+    left: 160px;
+}
+
+#2
+{
+    background: url("../pics/img2.jpg") -300px 0 no-repeat;
+    top: 5px;
+    left: 300px;
+}
+
+.puzzle-box ul {
+    margin: 0 auto;
+    font-size: 0;
+    position: relative;
+    user-select: none;
+    line-height: 450px;
+    color: white;
+}
+
+#backdrop
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    text-decoration-color: black;
 }
